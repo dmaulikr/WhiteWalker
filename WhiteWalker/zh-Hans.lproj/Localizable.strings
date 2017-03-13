@@ -9,3 +9,7 @@
 "alert_title" = "该起来活动活动了";
 
 "alert_content" = "时间已过去了";
+
+"minute" = "分钟";
+"hour" = "小时";
+"hours" = "小时";

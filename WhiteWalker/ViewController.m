@@ -41,7 +41,7 @@
 
 - (void)configureData
 {
-    _dataArr = @[ @5, @10, @45, @60, @75, @90, @0 ];
+    _dataArr = @[ @(15*6), @(30*60), @(45*60), @(60*60), @(75*60), @(90*60), @(10000) ];
 }
 
 - (void)initUI
@@ -75,31 +75,37 @@
 - (IBAction)tapButton:(id)sender {
     NSInteger interval = [_dataArr[_timeBox.indexOfSelectedItem] integerValue];
     NSLog(@">>>>>>>>%li  %li", _timeBox.indexOfSelectedItem, interval);
+    
+    NSDictionary *appDict = [ToolsUtil getAppConfig];
+    [appDict setValue:[NSNumber numberWithInteger:_timeBox.indexOfSelectedItem] forKey:@"timeIndex"];
+    
+    if (_timeBox.indexOfSelectedItem == _dataArr.count - 1) {
+        interval = _timeTextField.integerValue;
+        [appDict setValue:[NSNumber numberWithInteger:interval] forKey:@"timeInterval"];
+    } else {
+        interval = [_dataArr[_timeBox.indexOfSelectedItem] integerValue];
+        [appDict setValue:_dataArr[_timeBox.indexOfSelectedItem] forKey:@"timeInterval"];
+    }
+    [ToolsUtil saveAppConfigToNSUserDefaults:appDict];
+    
     _timer = [NSTimer scheduledTimerWithTimeInterval:interval
                                               target:self
                                             selector:@selector(remind)
                                             userInfo:nil
-                                             repeats:NO];
+                                             repeats:YES];
     
-    NSDictionary *appDict = [ToolsUtil getAppConfig];
-    [appDict setValue:[NSNumber numberWithInteger:_timeBox.indexOfSelectedItem] forKey:@"timeIndex"];
-    if (_timeBox.indexOfSelectedItem == _dataArr.count - 1) {
-        [appDict setValue:[NSNumber numberWithInteger:_timeTextField.integerValue] forKey:@"timeInterval"];
-    } else {
-        [appDict setValue:_dataArr[_timeBox.indexOfSelectedItem] forKey:@"timeInterval"];
-    }
-    
-    [ToolsUtil saveAppConfigToNSUserDefaults:appDict];
+    _actionButton.enabled = NO;
+    _stopButton.enabled = YES;
 }
 - (IBAction)tapStopButton:(id)sender {
     [_timer invalidate];
+    _timer = nil;
+    _actionButton.enabled = YES;
+    _stopButton.enabled = NO;
 }
 
 - (void)remind
 {
-    NSInteger interval = [_dataArr[_timeBox.indexOfSelectedItem] integerValue];
-    NSLog(@">>>>>>>>%li  %li", _timeBox.indexOfSelectedItem, interval);
-    
     [[NSUserNotificationCenter defaultUserNotificationCenter] scheduleNotification:self.userNtf];
 }
 
@@ -158,7 +164,7 @@
     if (!_userNtf) {
         _userNtf = [[NSUserNotification alloc] init];
         _userNtf.title = NSLocalizedString(@"alert_title", nil);
-        _userNtf.subtitle = @"";
+        _userNtf.subtitle = [NSString stringWithFormat:@"%@ %@", NSLocalizedString(@"alert_content", nil), [self calcTimeInterval]];
         _userNtf.deliveryDate = [NSDate dateWithTimeIntervalSinceNow:0];
         _userNtf.soundName = NSUserNotificationDefaultSoundName;
 //        _userNtf.actionButtonTitle = @"知道了";
@@ -166,6 +172,17 @@
         [_userNtf setValue:@YES forKey:@"_showsButtons"];
     }
     return _userNtf;
+}
+
+- (NSString *)calcTimeInterval
+{
+    NSString *result;
+    if (_timeBox.indexOfSelectedItem == _dataArr.count - 1) {
+        result = [NSString stringWithFormat:@"%li%@", _timeTextField.integerValue, NSLocalizedString(@"miutes", nil)];
+    } else {
+         result = _timeBox.objectValues[_timeBox.indexOfSelectedItem];
+    }
+    return result;
 }
 
 
