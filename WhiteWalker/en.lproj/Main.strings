@@ -1,0 +1,102 @@
+
+/* Class = "NSMenuItem"; title = "WhiteWalker"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "WhiteWalker";
+
+/* Class = "NSMenuItem"; title = "Quit WhiteWalker"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "Quit WhiteWalker";
+
+/* Class = "NSMenuItem"; title = "About WhiteWalker"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "About WhiteWalker";
+
+/* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
+"AYu-sK-qS6.title" = "Main Menu";
+
+/* Class = "NSMenuItem"; title = "Preferences…"; ObjectID = "BOF-NM-1cW"; */
+"BOF-NM-1cW.title" = "Preferences…";
+
+/* Class = "NSMenuItem"; title = "Close"; ObjectID = "DVo-aG-piG"; */
+"DVo-aG-piG.title" = "Close";
+
+/* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
+"F2S-fz-NVQ.title" = "Help";
+
+/* Class = "NSMenuItem"; title = "WhiteWalker Help"; ObjectID = "FKE-Sm-Kum"; */
+"FKE-Sm-Kum.title" = "WhiteWalker Help";
+
+/* Class = "NSWindow"; title = "WhiteWalker"; ObjectID = "IQv-IB-iLA"; */
+"IQv-IB-iLA.title" = "WhiteWalker";
+
+/* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
+"Kd2-mp-pUS.title" = "Show All";
+
+/* Class = "NSMenuItem"; title = "Bring All to Front"; ObjectID = "LE2-aR-0XJ"; */
+"LE2-aR-0XJ.title" = "Bring All to Front";
+
+/* Class = "NSMenuItem"; title = "Services"; ObjectID = "NMo-om-nkz"; */
+"NMo-om-nkz.title" = "Services";
+
+/* Class = "NSMenuItem"; title = "Minimize"; ObjectID = "OY7-WF-poV"; */
+"OY7-WF-poV.title" = "Minimize";
+
+/* Class = "NSMenuItem"; title = "Hide WhiteWalker"; ObjectID = "Olw-nP-bQN"; */
+"Olw-nP-bQN.title" = "Hide WhiteWalker";
+
+/* Class = "NSButtonCell"; title = "Go"; ObjectID = "Qag-Zs-fwn"; */
+"Qag-Zs-fwn.title" = "Go";
+
+/* Class = "NSMenuItem"; title = "Zoom"; ObjectID = "R4o-n2-Eq4"; */
+"R4o-n2-Eq4.title" = "Zoom";
+
+/* Class = "NSMenu"; title = "Window"; ObjectID = "Td7-aD-5lo"; */
+"Td7-aD-5lo.title" = "Window";
+
+/* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
+"Vdr-fp-XzO.title" = "Hide Others";
+
+/* Class = "NSMenuItem"; title = "New"; ObjectID = "Was-JA-tGl"; */
+"Was-JA-tGl.title" = "New";
+
+/* Class = "NSMenuItem"; title = "Window"; ObjectID = "aUF-d1-5bR"; */
+"aUF-d1-5bR.title" = "Window";
+
+/* Class = "NSMenu"; title = "File"; ObjectID = "bib-Uj-vzu"; */
+"bib-Uj-vzu.title" = "File";
+
+/* Class = "NSMenuItem"; title = "File"; ObjectID = "dMs-cI-mzQ"; */
+"dMs-cI-mzQ.title" = "File";
+
+/* Class = "NSButtonCell"; title = "Stop"; ObjectID = "du3-wV-cXO"; */
+"du3-wV-cXO.title" = "Stop";
+
+/* Class = "NSMenu"; title = "Services"; ObjectID = "hz9-B4-Xy5"; */
+"hz9-B4-Xy5.title" = "Services";
+
+/* Class = "NSMenu"; title = "WhiteWalker"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "WhiteWalker";
+
+/* Class = "NSTextFieldCell"; title = "Time:"; ObjectID = "vJb-8e-BuX"; */
+"vJb-8e-BuX.title" = "Time:";
+
+/* Class = "NSMenuItem"; title = "Help"; ObjectID = "wpr-3q-Mcd"; */
+"wpr-3q-Mcd.title" = "Help";
+
+/* Class = "NSComboBoxCell"; wuY-99-J32.ibShadowedObjectValues[0] = "15 minutes"; ObjectID = "wuY-99-J32"; */
+"wuY-99-J32.ibShadowedObjectValues[0]" = "15 minutes";
+
+/* Class = "NSComboBoxCell"; wuY-99-J32.ibShadowedObjectValues[1] = "30 minutes"; ObjectID = "wuY-99-J32"; */
+"wuY-99-J32.ibShadowedObjectValues[1]" = "30 minutes";
+
+/* Class = "NSComboBoxCell"; wuY-99-J32.ibShadowedObjectValues[2] = "45 minutes"; ObjectID = "wuY-99-J32"; */
+"wuY-99-J32.ibShadowedObjectValues[2]" = "45 minutes";
+
+/* Class = "NSComboBoxCell"; wuY-99-J32.ibShadowedObjectValues[3] = "1 hour"; ObjectID = "wuY-99-J32"; */
+"wuY-99-J32.ibShadowedObjectValues[3]" = "1 hour";
+
+/* Class = "NSComboBoxCell"; wuY-99-J32.ibShadowedObjectValues[4] = "1 hour 15 minutes"; ObjectID = "wuY-99-J32"; */
+"wuY-99-J32.ibShadowedObjectValues[4]" = "1.25 hours";
+
+/* Class = "NSComboBoxCell"; wuY-99-J32.ibShadowedObjectValues[5] = "1.5 hours"; ObjectID = "wuY-99-J32"; */
+"wuY-99-J32.ibShadowedObjectValues[5]" = "1.5 hours";
+
+/* Class = "NSComboBoxCell"; wuY-99-J32.ibShadowedObjectValues[6] = "Customize"; ObjectID = "wuY-99-J32"; */
+"wuY-99-J32.ibShadowedObjectValues[6]" = "Customize";

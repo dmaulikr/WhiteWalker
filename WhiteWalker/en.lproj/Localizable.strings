@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  WhiteWalker
+
+  Created by Amon on 2017/3/13.
+  Copyright © 2017年 GodPlace. All rights reserved.
+*/
+
+"alert_title" = "It's time to stand up!";
+
+"alert_content" = "Time has passed for";
+
+"minute" = "minutes";
+"hour" = "hour";
+"hours" = "hours";

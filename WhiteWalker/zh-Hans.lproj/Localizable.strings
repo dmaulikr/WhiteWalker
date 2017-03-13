@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  WhiteWalker
+
+  Created by Amon on 2017/3/13.
+  Copyright © 2017年 GodPlace. All rights reserved.
+*/
+
+"alert_title" = "该起来活动活动了";
+
+"alert_content" = "时间已过去了";

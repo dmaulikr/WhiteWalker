@@ -13,6 +13,9 @@
 @property (weak) IBOutlet NSButton *actionButton;
 
 @property (weak) IBOutlet NSButton *stopButton;
+@property (weak) IBOutlet NSTextField *timeTextField;
+@property (weak) IBOutlet NSTextField *inputLabel;
+@property (weak) IBOutlet NSTextField *suffixLabel;
 
 @end
 
