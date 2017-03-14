@@ -13,3 +13,6 @@
 "minute" = "minutes";
 "hour" = "hour";
 "hours" = "hours";
+
+"alert_interval_too_long" = "Be careful, man!";
+"alert_interval_advise" = "It's better for use a smaller value, keep moving";

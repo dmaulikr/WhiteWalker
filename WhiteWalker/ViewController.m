@@ -19,6 +19,7 @@
 
 @end
 
+#define DEV_MODE YES
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -41,7 +42,7 @@
 
 - (void)configureData
 {
-    _dataArr = @[ @(15*6), @(30*60), @(45*60), @(60*60), @(75*60), @(90*60), @(10000) ];
+    _dataArr = @[ @15, @30, @45, @60, @75, @90, @10000 ];
 }
 
 - (void)initUI
@@ -49,6 +50,7 @@
     self.title = @"WhiteWalker";
  
     _timeBox.delegate = self;
+    _timeBox.editable = NO;
     _timeTextField.delegate = self;
     
     NSInteger selectIndex = 0;
@@ -88,6 +90,16 @@
     }
     [ToolsUtil saveAppConfigToNSUserDefaults:appDict];
     
+    if (interval > [_dataArr[_dataArr.count - 2] integerValue]) {
+        NSAlert *alert = [[NSAlert alloc] init];
+        alert.messageText = NSLocalizedString(@"alert_interval_too_long", nil);
+        alert.informativeText = NSLocalizedString(@"alert_interval_advise", nil);
+        [alert runModal];
+    }
+    
+    if (!DEV_MODE) {
+        interval = interval*60;
+    }
     _timer = [NSTimer scheduledTimerWithTimeInterval:interval
                                               target:self
                                             selector:@selector(remind)
@@ -106,6 +118,7 @@
 
 - (void)remind
 {
+    NSLog(@"remind >>>>");
     [[NSUserNotificationCenter defaultUserNotificationCenter] scheduleNotification:self.userNtf];
 }
 
@@ -133,11 +146,6 @@
         _suffixLabel.hidden = YES;
     }
 }
-
-//- (BOOL)textShouldBeginEditing:(NSText *)textObject
-//{
-//    return YES;
-//}
 
 - (void)controlTextDidChange:(NSNotification *)obj
 {

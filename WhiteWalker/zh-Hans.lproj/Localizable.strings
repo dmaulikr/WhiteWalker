@@ -13,3 +13,6 @@
 "minute" = "分钟";
 "hour" = "小时";
 "hours" = "小时";
+
+"alert_interval_too_long" = "悠着点，伙计！";
+"alert_interval_advise" = "建议使用更小的值，常起来动动";
