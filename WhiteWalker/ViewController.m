@@ -19,7 +19,7 @@
 
 @end
 
-#define DEV_MODE YES
+#define DEV_MODE NO
 @implementation ViewController
 
 - (void)viewDidLoad {
